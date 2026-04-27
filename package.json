@@ -1,0 +1,22 @@
+{
+  "name": "mcp-rh-docs",
+  "version": "1.0.0",
+  "description": "MCP server for Red Hat and Quarkus documentation",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": { "mcp-rh-docs": "dist/index.js" },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3"
+  }
+}

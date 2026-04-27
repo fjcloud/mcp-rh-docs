@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "redhat-quarkus-docs": {
+      "command": "node",
+      "args": ["${workspaceFolder}/scripts/mcp-stdio.mjs"]
+    }
+  }
+}

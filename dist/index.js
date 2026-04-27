@@ -101,5 +101,15 @@ server.registerTool("search_rh_docs", {
         return { content: [{ type: "text", text: `Error: ${e instanceof Error ? e.message : e}` }], isError: true };
     }
 });
+process.on("uncaughtException", (err) => {
+    console.error("[mcp-rh-docs] uncaughtException:", err);
+    process.exit(1);
+});
+process.on("unhandledRejection", (reason) => {
+    console.error("[mcp-rh-docs] unhandledRejection:", reason);
+    process.exit(1);
+});
+console.error("[mcp-rh-docs] starting…");
 const transport = new StdioServerTransport();
 await server.connect(transport);
+console.error("[mcp-rh-docs] connected, waiting for requests");
